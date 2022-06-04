@@ -15,13 +15,22 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
+
+//pipes
+import { NoImagePipe } from './pipes/no-image.pipe';
+import { CardComponent } from './components/shared/card/card.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoImagePipe,
+    CardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

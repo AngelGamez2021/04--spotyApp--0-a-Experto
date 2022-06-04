@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div class="animated fadeIn" >
+  <div class="search">
+    <input
+      #termino
+      type="text"
+      (keyup)="searchArtist(termino.value)"
+      placeholder="Search"
+    />
+    <!-- keyup es para cuando se presione una tecla -->
+  </div>
+
+  <app-card [info]="filter" ></app-card>
+
+
+ 

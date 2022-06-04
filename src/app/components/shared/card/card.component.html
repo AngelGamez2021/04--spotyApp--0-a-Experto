@@ -1,0 +1,15 @@
+<div class="container animated fadeIn">
+  
+  
+  
+  <div *ngFor="let album of info" class="card">
+    <img [src]="album.images | noImage" />
+    
+    <h1>{{ album.name }}</h1>
+    
+    <span *ngFor="let artista of album.artists">
+      {{ artista.name }}
+    </span>
+  </div>
+  
+</div>

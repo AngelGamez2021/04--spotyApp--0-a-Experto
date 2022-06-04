@@ -1,11 +1,4 @@
 
-    <div class="container" >
-        <div *ngFor="let album of newAlbumList" class="card" >
-            <img [src]="album.images[0].url">
-            <ul>
-                <li> <b>Nombre </b>.. </li>
-                <li> <b>Apellido </b> ..</li>
-                <li> <b>Correo </b> .. </li>
-            </ul>
-        </div>
-    </div>
+
+ <app-card [info]="newAlbumList" ></app-card>
+

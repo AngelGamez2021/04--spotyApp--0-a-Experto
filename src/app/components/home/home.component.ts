@@ -15,12 +15,9 @@ export class HomeComponent  {
     private _spotifyService: SpotifyService) {
 
       
-this._spotifyService.getNewRelases().subscribe((data: any) =>{
-  
-   this.newAlbumList = data.albums.items;
+this._spotifyService.getNewRelases().subscribe(data => this.newAlbumList = data
    
-   console.log('ArrayLocal',this.newAlbumList);
-})
+)
       
   
    }
