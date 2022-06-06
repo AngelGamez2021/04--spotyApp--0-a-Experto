@@ -14,7 +14,7 @@ export class SearchComponent {
 
   searchArtist(termino: string) {
 
-    this._spotifyService.getFilterArtist(termino).subscribe(data => this.filter = data
+    this._spotifyService.getFilterArtists(termino).subscribe(data => this.filter = data
     )
 
 

@@ -1,1 +1,51 @@
-<p>artista works!</p>
+<div class="artist animated2 fadeIn2">
+  <div class="izq">
+    <img id="profile" [src]="artistData.images | noImage" class="img-circle" />
+
+    <div>
+      <h2>{{ artistData.name }}</h2>
+      <a [href]="artistData.external_urls.spotify" target="_blank"
+        >Go to official Spotify profile</a
+      >
+      <!-- target="_blank" sirve para que no se vaya a la otra pagina, si no que abra otra pestaña -->
+    </div>
+  </div>
+
+  <div>
+    <button routerLink="/search">Back to filter</button>
+  </div>
+</div>
+
+
+
+<div class="table">
+    <table>
+        <thead>
+            <tr class="space">
+                <th>Photo</th>
+                <th>Albuḿ</th>
+                <th>Song</th>
+                <th>preview</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let tracks of topTracks">
+                <td>
+                    <img class="photo" [src]="tracks.album.images | noImage" alt="">
+                </td>
+                <td>{{tracks.album.name}}</td>
+                <td>{{tracks.name}}</td>
+                <td>
+                    <audio [src]="tracks.preview_url" controls></audio>
+
+                </td>
+
+            </tr>
+        </tbody>
+
+
+
+
+    </table>
+</div>

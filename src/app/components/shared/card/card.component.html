@@ -2,7 +2,7 @@
   
   
   
-  <div *ngFor="let album of info" class="card">
+  <div (click)="SeeArtist(album)" *ngFor="let album of info" class="card puntero">
     <img [src]="album.images | noImage" />
     
     <h1>{{ album.name }}</h1>
